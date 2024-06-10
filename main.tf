@@ -1,20 +1,36 @@
-
-#chokoooooooooooooooooo
-resource "aws_dynamodb_table" "Personne" {
-  name           = var.PersonneTableName
-  hash_key       = var.PersonneHashKey
+resource "aws_dynamodb_table" "dynamodb-table" {
+  name           = var.dynamodb_table
+  billing_mode   = "PROVISIONED"
+  read_capacity  = var.read_capacity
+  write_capacity = var.write_capacity
+  hash_key       = "Id"
 
   attribute {
-    name = var.PersonneHashKey
-    type = "S"  # String type
+    name = "Id"
+    type = "S"
   }
- 
 
-  # Optionally, define other attributes, global secondary indexes, local secondary indexes, etc.
-  
-  billing_mode   = "PAY_PER_REQUEST"  # Example billing mode
+  attribute {
+    name = "GameTitle"
+    type = "S"
+  }
+
+  attribute {
+    name = "TopScore"
+    type = "N"
+  }
+
+  global_secondary_index {
+    name            = "GameTitleIndex"
+    hash_key        = "GameTitle"
+    range_key       = "TopScore"
+    write_capacity  = var.write_capacity
+    read_capacity   = var.read_capacity
+    projection_type = "ALL"
+  }
+
+  tags = {
+    Name        = var.dynamodb_table
+    Environment = "production"
+  }
 }
-
-#terraform init : initialisation de projet ::initialisation des plaging // creation d'env de travail //
-#terraform validate : validé le code syntaxiquement t
-# terraform plan : analyse du code // detection des chang //

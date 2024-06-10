@@ -1,16 +1,17 @@
-
-
-variable "PersonneTableName" {
-  description = "Le nom de la table DynamoDB à créer"
+variable "dynamodb_table" {
+  description = "The name of the DynamoDB table"
   type        = string
+  default     = "example-table"
 }
 
-variable "PersonneHashKey" {
-  description = "Le nom de la clé de hachage de la table DynamoDB"
- 
+variable "read_capacity" {
+  description = "Read capacity for the table"
+  type        = number
+  default     = 20
 }
 
-
-
-
-
+variable "write_capacity" {
+  description = "Write capacity for the table"
+  type        = number
+  default     = 20
+}
