@@ -1,0 +1,20 @@
+git init /:Initialise un nouveau dépôt Git dans le répertoire courant.
+
+git clone <URL>:/Clone un dépôt Git distant dans un nouveau répertoire local.
+
+git add <fichier>:/Ajoute les modifications du fichier spécifié à la zone de staging pour le prochain commit.
+git add . /:Ajoute toutes les modifications dans le répertoire de travail à la zone de staging pour le prochain commit.
+git commit -m "message":/Crée un nouveau commit avec les modifications de la zone de staging et un message de commit.
+git status/:Affiche l'état des fichiers dans le répertoire de travail, indiquant les fichiers modifiés, ajoutés ou supprimés.
+git log:/Affiche l'historique des commits avec leurs identifiants, auteurs, dates et messages.
+git branch:/Affiche la liste des branches locales et met en évidence la branche actuelle.
+git branch <nom_de_branche>:/Crée une nouvelle branche à partir de la branche actuelle.
+git checkout <nom_de_branche>:/Bascule vers une autre branche.
+git merge <branche>:/Fusionne la branche spécifiée dans la branche actuelle.
+git push <remote> <branche>:/Pousse les commits locaux vers le dépôt distant spécifié.
+git pull <remote> <branche>:/Récupère les modifications depuis le dépôt distant et fusionne les changements dans la branche locale.
+git remote add <nom> <URL>:/Ajoute un nouveau dépôt distant avec un nom spécifié.
+git remote -v:/Affiche les dépôts distants configurés avec leurs URLs.
+git diff:/Affiche les différences entre les modifications dans le répertoire de travail et la zone de staging.
+git reset:/Annule les modifications dans la zone de staging sans modifier les fichiers du répertoire de travail.
+git reset --hard:/Annule les modifications dans la zone de staging et dans le répertoire de travail, revenant à l'état du dernier commit.

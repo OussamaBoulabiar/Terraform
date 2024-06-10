@@ -1,0 +1,33 @@
+terraform init : Initialise un nouveau projet Terraform, télécharge les fournisseurs et configure le répertoire de travail.
+
+terraform plan : Affiche les changements proposés par Terraform sans les appliquer réellement.
+
+terraform apply : Applique les changements proposés par Terraform après avoir exécuté un plan et accepté les changements.
+
+terraform destroy : Détruit les ressources gérées par Terraform selon la configuration du projet.
+
+terraform validate : Valide la syntaxe des fichiers de configuration Terraform.
+
+terraform fmt : Reformate les fichiers de configuration Terraform pour qu'ils respectent les conventions de style.
+
+terraform workspace : Gère les workspaces Terraform pour isoler les ressources par environnement.
+
+terraform state : Gère l'état du déploiement Terraform, notamment en permettant de lister, visualiser et modifier l'état.
+
+terraform import : Importe des ressources existantes dans la configuration Terraform pour les gérer.
+
+terraform output : Affiche les valeurs de sortie (output) définies dans les fichiers de configuration Terraform.
+
+terraform version : Affiche la version de Terraform installée sur votre système.
+
+terraform refresh : Actualise l'état des ressources gérées par Terraform en consultant l'API du fournisseur.
+
+terraform taint : Marque une ressource Terraform pour une destruction lors de la prochaine opération apply.
+
+terraform untaint : Supprime la marque de destruction d'une ressource Terraform.
+
+terraform graph : Génère un graphe de dépendance des ressources Terraform.
+
+terraform import : Importe des ressources existantes dans la configuration Terraform.
+
+terraform output : Affiche les valeurs de sortie (output) définies dans les fichiers de configuration Terraform.
